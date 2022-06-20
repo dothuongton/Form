@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Đăng kí</title>
+</head>
+<body>
+    <div class="container">
+        <form class="form__register" action="">
+            <div class="form__register--body">
+                <h4 class="title">Đăng kí tài khoản user</h4>
+                <label for="username">User Name:</label>
+                <input type="text" id="username" name="username" value="">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" value="">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" value="">
+                <label for="birthday">Birthday</label>
+                <input type="date" name="birthday" placeholder="dd-mm-yyyy" min="1997-01-01" max="2030-12-31" value="">
+
+            </div>
+            <div class="form_register--footer">
+                <button class="form__register--btn btn--save">Save</button>
+                <button class="form__register--btn btn--reset">Reset</button>
+            </div>
+        </form>
+        <table>
+            <thead>
+                <th>No</th>
+                <th>User Name</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Birthday</th>
+                <th></th>
+                <th></th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>A</td>
+                    <td>Do van A</td>
+                    <td>dothuongton@gmail.com</td>
+                    <td>16-05-2000</td>
+                    <td>
+                        <button class="form__register--btn btn--reset">Edit</button>
+                    </td>
+                    <td>
+                        <button class="form__register--btn btn--delete">Delete</button>  
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
