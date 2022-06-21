@@ -9,50 +9,60 @@
 </head>
 <body>
     <div class="container">
+        <h4 class="title">Đăng kí tài khoản user</h4>
+
         <form class="form__register" action="">
             <div class="form__register--body">
-                <h4 class="title">Đăng kí tài khoản user</h4>
-                <label for="username">User Name:</label>
-                <input type="text" id="username" name="username" value="">
-                <label for="fullname">Full Name</label>
-                <input type="text" id="fullname" name="fullname" value="">
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" value="">
-                <label for="birthday">Birthday</label>
-                <input type="date" name="birthday" placeholder="dd-mm-yyyy" min="1997-01-01" max="2030-12-31" value="">
-
+                <div class="form__register--body--item">
+                    <label for="username">Mã sinh viên:</label>
+                    <input type="text" id="username" name="username" value="">
+                </div>
+                <div class="form__register--body--item">
+                    <label for="fullname">Họ và tên</label>
+                    <input type="text" id="fullname" name="fullname" value="">
+                </div>
+                <!-- <div class="form__register--body--item">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" value="">
+                </div> -->
+                <div class="form__register--body--item">
+                    <label for="lopHoc">Lớp</label>
+                    <input type="text" id="lopHoc" name="lopHoc">
+                </div>
             </div>
-            <div class="form_register--footer">
-                <button class="form__register--btn btn--save">Save</button>
-                <button class="form__register--btn btn--reset">Reset</button>
+            <div class="form__register--footer">
+                <button class="form__register--btn btn--save" onclick="save()">Save</button>
+                <button class="form__register--btn btn--reset" onclick="reset()">Reset</button>
             </div>
         </form>
-        <table>
-            <thead>
-                <th>No</th>
-                <th>User Name</th>
-                <th>Full Name</th>
-                <th>Email</th>
-                <th>Birthday</th>
-                <th></th>
-                <th></th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>A</td>
-                    <td>Do van A</td>
-                    <td>dothuongton@gmail.com</td>
-                    <td>16-05-2000</td>
-                    <td>
-                        <button class="form__register--btn btn--reset">Edit</button>
-                    </td>
-                    <td>
-                        <button class="form__register--btn btn--delete">Delete</button>  
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table__view">
+            <table>
+                <thead>
+                    <th>STT</th>
+                    <th>Mã Sinh Viên</th>
+                    <th>Họ Và Tên</th>
+                    <th>Lớp</th>
+                    <th></th>
+                    <th></th>
+                </thead>
+                <tbody id="table__view">
+                    <!-- <tr>
+                        <td>1</td>
+                        <td>HS1</td>
+                        <td>Do van A</td>
+                        <td>5A</td>
+                        <td>
+                            <button class="form__register--btn btn--reset" onclick="edit()">Edit</button>
+                        </td>
+                        <td>
+                            <button class="form__register--btn btn--delete">Delete</button>  
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+        
     </div>
+    <script src="main.js"></script>
 </body>
 </html>

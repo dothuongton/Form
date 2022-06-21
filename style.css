@@ -6,6 +6,7 @@
     --color-main:#00904a;
     --color--btn-yellow:#fcba03;
     --color--btn-delete:#f54251;
+    --color--border:#A9A9A9;
 }
 body{
     font-family: 'Courier New', Courier, monospace;
@@ -17,10 +18,13 @@ body{
 }
 
 /* table */
+.title{
+    background-color: var(--color-main);
+    padding: 10px;
+    color: #fff;
+}
 table,th,td{
-    /* border-style: ridge;
-     */
-     border: 1px solid gray;
+     border: 1px solid var(--color--border);
      border-collapse: collapse;
 }
 th{
@@ -31,6 +35,14 @@ th{
 td{
     padding: 10px;
 }
+input{
+    display: block;
+    width: 100%;
+    height: 25px;
+    margin-top: 10px;
+
+}
+
 /* end-table */
 
 
@@ -38,8 +50,20 @@ td{
 /* form */
 .form__register{
     width: 100vw;
-    height: 200px;
+    border: 1px solid var(--color--border);
 
+}
+.form__register--body{
+    padding:20px;
+    border-radius: 5px;
+}
+.form__register--body--item{
+    margin: 20px 0px 0px 0px;
+
+}
+/* footer */
+.form__register--footer{
+    padding: 20px;
 }
 .form__register--btn{
     width: 50px;
@@ -51,6 +75,8 @@ td{
     background-color:var(--color-main);
     color:#fff;
 }
+
+
 /* end-form */
 
 
@@ -64,5 +90,15 @@ button.form__register--btn.btn--reset{
 }
 button.form__register--btn.btn--delete{
     background-color: var(--color--btn-delete);
+    color: #fff;
 }
 /* end-button */
+
+/* table__view */
+.table__view{
+    margin-top: 20px;
+}
+.table__view table{
+    width: 100%;
+    text-align: center;
+}
