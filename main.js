@@ -87,7 +87,6 @@ function getValueEdit(id){
                 $('lopHoc').value = data.lopHoc;
             }
         );
-    id = id;
 }
 
 function edit(id){
@@ -103,7 +102,6 @@ function update(e){
     let msv = $('msv').value;
     let fullName = $('fullName').value;
     let lopHoc = $('lopHoc').value;
-    console.log(idUpdate)
     try {
         const requestUpdate = {
             method: 'PUT',
