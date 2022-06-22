@@ -92,6 +92,10 @@ button.form__register--btn.btn--delete{
     background-color: var(--color--btn-delete);
     color: #fff;
 }
+#btn--update{
+    position: absolute;
+    left: 1.9%;
+}
 /* end-button */
 
 /* table__view */

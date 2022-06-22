@@ -14,12 +14,12 @@
         <form class="form__register" action="">
             <div class="form__register--body">
                 <div class="form__register--body--item">
-                    <label for="username">Mã sinh viên:</label>
-                    <input type="text" id="username" name="username" value="">
+                    <label for="msv">Mã sinh viên:</label>
+                    <input type="text" id="msv" name="msv" value="">
                 </div>
                 <div class="form__register--body--item">
-                    <label for="fullname">Họ và tên</label>
-                    <input type="text" id="fullname" name="fullname" value="">
+                    <label for="fullName">Họ và tên</label>
+                    <input type="text" id="fullName" name="fullName" value="">
                 </div>
                 <!-- <div class="form__register--body--item">
                     <label for="email">Email</label>
@@ -31,8 +31,10 @@
                 </div>
             </div>
             <div class="form__register--footer">
-                <button class="form__register--btn btn--save" onclick="save()">Save</button>
+                <button class="form__register--btn btn--save" id="btn--save" onclick="save()">Save</button>
                 <button class="form__register--btn btn--reset" onclick="reset()">Reset</button>
+                <button class="form__register--btn btn--save" id="btn--update" onclick="update()">Update</button>
+
             </div>
         </form>
         <div class="table__view">
@@ -61,7 +63,6 @@
                 </tbody>
             </table>
         </div>
-        
     </div>
     <script src="main.js"></script>
 </body>
