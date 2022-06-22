@@ -1,7 +1,7 @@
 const $ = document.getElementById.bind(document);
 const api = 'https://624fab5857d3be703e64f07a.mockapi.io/api/students';
 $('btn--update').style.visibility = 'hidden';
-let id;
+let idUpdate;
 function getData(){
     fetch(api)
     .then(res=>res.json())
@@ -94,14 +94,16 @@ function edit(id){
     getValueEdit(id);
     $('btn--save').style.visibility = 'hidden';
     $('btn--update').style.visibility = 'visible';
-}
+    idUpdate = id
+}   
 
 
-function update(){
+function update(e){
+    e.preventDefault()
     let msv = $('msv').value;
     let fullName = $('fullName').value;
     let lopHoc = $('lopHoc').value;
-    
+    console.log(idUpdate)
     try {
         const requestUpdate = {
             method: 'PUT',
@@ -110,9 +112,9 @@ function update(){
                msv,fullName,lopHoc
             })
         };
-        fetch(`${api}/${id}`, requestUpdate)
-            .then(res => res.json())
-        getData();
+        fetch(`${api}/${idUpdate}`, requestUpdate)
+            .then(res => getData(reset()))
+        
     } catch (e) {
         console.log(e)
     }
